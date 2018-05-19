@@ -12,12 +12,10 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-const TitleWrapper = styled.div`
-  margin: 2% 0;
-`;
+const TitleWrapper = styled.div``;
 
 const BoxWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: flex;
   font-size: 40px;
