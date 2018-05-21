@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import media from '../utils/media';
+
 const Wrapper = styled.div`
   height: 800px;
 `;

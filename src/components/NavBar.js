@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import media from '../utils/media';
+
 import MyLogo from '../images/MyPage_Icon_Owol.png';
 // import { Gothic } from '../utils/Font';
 
@@ -17,11 +19,19 @@ const MayWrapper = styled.div`
   width: 120px;
   margin: auto;
   position: absolute;
+
+  ${media.mobile`
+    width: 80px;
+  `};
 `;
 
 const WithMay = styled.img`
   width: 100%;
   margin-left: 5vh;
+
+  ${media.mobile`
+  margin-left: 2vh;
+`};
 `;
 
 // const LinkWrapper = styled.div`

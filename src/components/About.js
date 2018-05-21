@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import media from '../utils/media';
 import Bar from './Bar';
 
 const Wrapper = styled.div`
@@ -20,11 +21,18 @@ const BoxWrapper = styled.div`
   display: flex;
   font-size: 40px;
   justify-content: center;
+
+  ${media.mobile`
+    font-size: 25px;
+  `};
 `;
 
 const Title = styled.p`
   font-weight: bold;
   font-size: ${p => p.size};
+  ${media.mobile`
+  font-size: 35px;
+`};
 `;
 
 const SubTitle = styled.p``;
@@ -33,19 +41,22 @@ const Content = styled.div`
   font-size: 18px;
   text-align: left;
   margin-left: 15%;
+  ${media.mobile`
+  font-size: 15px;
+`};
 `;
 
-const Left = styled.div`
+const Article = styled.div`
   width: 25vw;
+  margin: 0 auto;
+  ${media.mobile`
+    width: 45vw;
+  `};
 `;
 
 // const Career = styled.div`
 //   width: 25vw;
 // `;
-
-const Right = styled.div`
-  width: 25vw;
-`;
 
 export default class About extends Component {
   render() {
@@ -55,7 +66,7 @@ export default class About extends Component {
           <Title size="50px">This Is Who I Am</Title>
         </TitleWrapper>
         <BoxWrapper>
-          <Left>
+          <Article>
             <SubTitle>
               <b>June's Log</b>
             </SubTitle>
@@ -66,9 +77,9 @@ export default class About extends Component {
             <Content>
               <br />2017.12 ~ 2018.06 페오펫 개발자 인턴
             </Content>
-          </Left>
+          </Article>
           <Bar vertical borderColor="white" />
-          <Right>
+          <Article>
             <SubTitle>
               <b>Skills</b>
             </SubTitle>
@@ -80,7 +91,7 @@ export default class About extends Component {
               <br />
               DB<br /> - MongoDB<br /> - Oracle
             </Content>
-          </Right>
+          </Article>
         </BoxWrapper>
       </Wrapper>
     );

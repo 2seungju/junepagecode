@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import media from '../utils/media';
 import SMS from '../images/speech-bubble.png';
 import Gmail from '../images/gmail-logo.png';
 import Git from '../images/github-logo.png';
@@ -10,10 +11,25 @@ const Wrapper = styled.div`
   height: 30vh;
   display: flex;
   justify-content: center;
+
+  ${media.mobile`
+  font-size: 15px;
+  flex-direction: column;
+  height: 100%;
+  padding: 40px;
+  justify-content: space-around;
+`};
 `;
 
 const ContactWrapper = styled.div`
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  ${media.mobile`
+    margin: 0;
+    margin-left: 5%;
+    justify-content: space-around;
+  `};
 `;
 
 const Contact = styled.a`
@@ -26,6 +42,9 @@ const Contact = styled.a`
     opacity: 0.7;
     cursor: default;
   }
+  ${media.mobile`
+  margin-bottom: ${p => (p.bottom ? '10%' : 0)};
+`};
 `;
 
 const ImgWrapper = styled.div`
@@ -42,7 +61,7 @@ export default class Footer extends Component {
     return (
       <Wrapper>
         <ContactWrapper>
-          <Contact>
+          <Contact bottom>
             <ImgWrapper>
               <Img src={SMS} alt=".." />
             </ImgWrapper>
@@ -50,7 +69,7 @@ export default class Footer extends Component {
               <b>010 - 6525 - 3918</b>
             </Title>
           </Contact>
-          <Contact href="mailto:a01065253918@gmail.com">
+          <Contact bottom href="mailto:a01065253918@gmail.com">
             <ImgWrapper>
               <Img src={Gmail} alt=".." />
             </ImgWrapper>
@@ -60,7 +79,7 @@ export default class Footer extends Component {
           </Contact>
         </ContactWrapper>
         <ContactWrapper>
-          <Contact href="https://github.com/SeungJoe/" target="blank">
+          <Contact bottom href="https://github.com/SeungJoe/" target="blank">
             <ImgWrapper>
               <Img src={Git} alt=".." />
             </ImgWrapper>
