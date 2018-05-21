@@ -79,7 +79,7 @@ export default class Footer extends Component {
           </Contact>
         </ContactWrapper>
         <ContactWrapper>
-          <Contact bottom href="https://github.com/SeungJoe/" target="blank">
+          <Contact bottom href="https://github.com/seungju-june/" target="blank">
             <ImgWrapper>
               <Img src={Git} alt=".." />
             </ImgWrapper>
