@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 // import homeImage from '../utils/image/background-img.jpg';
+import { black, white2, white } from '../utils/colors';
 import media from '../utils/media';
 import { Pen } from '../utils/Font';
 import Beat from '../images/Arrow.png';
@@ -12,6 +13,7 @@ const Wrapper = styled.div`
   text-align: center;
   height: 100vh;
   font-family: ${Pen};
+  background: ${p => p.backround};
 `;
 
 // const Blur = styled.div`
@@ -63,7 +65,7 @@ const Img = styled.img`
 export default class Home extends Component {
   render() {
     return (
-      <Wrapper>
+      <Wrapper backround={white2}>
         <TextBox>
           <Text>
             Hello<br /> June's World

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { black, white2, white } from '../utils/colors';
 import media from '../utils/media';
 import Bar from './Bar';
 
@@ -8,7 +9,7 @@ const Wrapper = styled.div`
   display: flex;
   text-align: center;
   height: 100vh;
-  background-color: #333333;
+  background-color: ${black};
   color: white;
   flex-direction: column;
 `;
