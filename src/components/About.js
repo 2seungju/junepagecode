@@ -35,12 +35,20 @@ const Title = styled.p`
 `};
 `;
 
-const SubTitle = styled.p``;
+const SubTitle = styled.p`
+  font-size: 50px;
+  ${media.mobile`
+    font-size: 30px;
+  `};
+`;
 
 const Content = styled.div`
-  font-size: 18px;
+  font-size: 32px;
   text-align: left;
   margin-left: 15%;
+  ${media.tablet`
+  font-size: 20px;
+`};
   ${media.mobile`
   font-size: 15px;
 `};
@@ -63,7 +71,7 @@ export default class About extends Component {
     return (
       <Wrapper>
         <TitleWrapper>
-          <Title size="50px">This Is Who I Am</Title>
+          <Title size="60px">This Is Who I Am</Title>
         </TitleWrapper>
         <BoxWrapper>
           <Article>
@@ -71,11 +79,10 @@ export default class About extends Component {
               <b>June's Log</b>
             </SubTitle>
             <Content>
-              2012.02 효양고등학교 졸업<br />
-              2012.03 -ing 국민대학교 재학 <br />
+              2012.03 -ing <br /> 국민대학교 경영정보학부 정보시스템전공 <br />
             </Content>
             <Content>
-              <br />2017.12 ~ 2018.06 페오펫 개발자 인턴
+              <br />2017.12 ~ 2018.06<br /> 페오펫 개발자 인턴
             </Content>
           </Article>
           <Bar vertical borderColor="white" />

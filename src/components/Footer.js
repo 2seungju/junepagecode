@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   height: 30vh;
   display: flex;
   justify-content: center;
+  background: #eaeaea;
 
   ${media.mobile`
   font-size: 15px;

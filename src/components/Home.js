@@ -39,15 +39,15 @@ const ImgWrapper = styled.div`
 
 const Img = styled.img`
   width: 3.1%;
-  animation: beat 0.8s infinite;
+  animation: beat 1s infinite;
   -webkit-animation: mover 1s infinite alternate;
-  animation: mover 1s infinite alternate;
+  animation: mover 0.6s infinite alternate;
   @-webkit-keyframes mover {
     0% {
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-20px);
+      transform: translateY(-30px);
     }
   }
   @keyframes mover {
@@ -55,7 +55,7 @@ const Img = styled.img`
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-20px);
+      transform: translateY(-30px);
     }
   }
 `;
