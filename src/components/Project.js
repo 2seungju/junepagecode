@@ -10,28 +10,32 @@ const Wrapper = styled.div`
   color: ${black};
   background: ${p => p.background};
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: auto;
-  padding: 0 20px;
+  height: 100%;
+  padding: 150px 25px;
+  position: relative;
 `;
 
-const ListWrapper = styled.div`
-  margin: auto;
-`;
+const ListWrapper = styled.div``;
 
 const TitleWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   position: absolute;
+  top: 0;
 `;
 
 const Title = styled.p`
   font-size: ${p => `${p.size}px`};
+  ${media.wide`
+  font-size: ${p => `${p.wide}px`};
+  margin: 0;
+  `};
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
+  justify-content: space-around;
+  ${media.tablet`
+    display: inline-block;
+  `};
 `;
 
 // const Content = styled.div`
@@ -41,6 +45,12 @@ const ContentWrapper = styled.div`
 
 const ImgWrapper = styled.div`
   width: 30%;
+  ${media.wide`
+    width: 50%;
+  `};
+  ${media.tablet`
+  width: 100%;
+`};
 `;
 
 const Link = styled.a`
@@ -54,10 +64,18 @@ const Img = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  margin: auto 10%;
+  ${media.tablet`
+  margin-top: 10%;
+`};
 `;
 
-const Text = styled.p``;
+const Text = styled.div`
+  margin: 6% 0;
+`;
+
+const Lighter = styled.p`
+  font-weight: lighter;
+`;
 
 export default class Project extends React.Component {
   render() {
@@ -76,10 +94,18 @@ export default class Project extends React.Component {
               </Link>
             </ImgWrapper>
             <TextWrapper>
-              <Title size={40}>페오펫 홈페이지 개발</Title>
-              <Text> 사이트 구성: React, Next, Express, MongoDB</Text>
-              <Text> 직무: Front-End 개발</Text>
-              <Text> 수행 업무: 반응형 웹 개발, 홈페이지 유지 보수, MongoDB & aws 관리</Text>
+              <Title size={40} wide={30}>
+                페오펫 홈페이지 개발
+              </Title>
+              <Text first>
+                1. 사이트 구성 <br />React, Next, Express, MongoDB
+              </Text>
+              <Text>
+                2. 직무<br />Front-End 개발
+              </Text>
+              <Text>
+                3. 수행 업무<br />반응형 웹 개발, 홈페이지 유지 보수, MongoDB & aws 관리
+              </Text>
             </TextWrapper>
           </ContentWrapper>
         </ListWrapper>
