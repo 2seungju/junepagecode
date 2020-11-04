@@ -2,4 +2,4 @@
 
 ## You can see page code!
 
-### https://seungju-june.github.io/junepage/
+### https://2seungju.github.io/junepage/
